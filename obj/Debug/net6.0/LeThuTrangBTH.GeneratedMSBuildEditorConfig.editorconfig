@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Users\Asus\Desktop\lttrang\LeThuTrangBTH
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Employee/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/HelloWorld/Index.cshtml]
@@ -33,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Person/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Person/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/Asus/Desktop/lttrang/LeThuTrangBTH/Views/Shared/Error.cshtml]
