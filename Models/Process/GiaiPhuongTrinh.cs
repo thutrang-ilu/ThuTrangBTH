@@ -25,30 +25,66 @@ namespace LeThuTrangBTH.Models.Process
            //trả về dữ liệu
            return thongBao;
         }
-         public string GiaiPhuongTrinhBacHai (double a,double b,double c)
+         public string GiaiPhuongTrinhBacHai(double heSoA, double heSoB,double heSoC)
+    {
+         //khai bao 1 bien  de chua du lieu
+        string thongBao = "";
+        //khai bao 1 bien so de chua gia tri
+        double x;
+        double x1;
+        double x2;
+        double delta;
+        delta = heSoB * heSoB - 4 * heSoA * heSoC ;
+        if(heSoA==0)
         {
-            string mess="";
-            double denta, x1, x2;
-            if(a==0)
+            //Giai pt bac 1
+            if(heSoB ==0)
             {
-                mess= GiaiPhuongTrinhBacHai(b,c)
+                //Neu b= 0 vaf c=0 thif phuowng trinh vo so nghiem
+                if(heSoC==0)
+            {
+                thongBao ="Phuong trinh co vo so nghiem";
             }
+            //neu b=0 va c!=0 thì vo nghiem
             else{
-                denta=b*b-4*a*c;
-                if(denta <0){
-                    mess="Phương trình vô nghiệm";
-                }
-                if(denta==0)
-                {
-                    mess="PT có nghiệm kép x="+(-b/(2*a));
-                }
-                else{
-                    x1=(-b+Math.Sqrt(denta))/(2*a);
-                    x2=(-b-Math.Sqrt(denta))/(2*a);
-                    mess="PT có 2 nghiệm: " + x1 + x2;
-                }
+                thongBao = "phuong trinh vo nghiem";
             }
-            return mess;
+            }
+            else 
+            {
+                x1=(double)-heSoC/heSoB;
+                thongBao ="Phuong trinh co nghiem duy nhat: x={0}";
+            }
+            return thongBao;
+         }
+        //Neu a!=0 thif bat dau bac 2
+        else
+        {
+            // tinh delta
+               delta = Math.Pow(heSoB, 2) - 4 * heSoA * heSoC;
+               //Kiem tra xem <0 thif pt vo nghiem
+               if(delta < 0)
+               {
+                thongBao = "Phuong trinh vo nghiem.";
+               }
+               //neu delta = 0 thif cos nghiem kep
+               else if(delta ==0)
+               {
+                x1=x2=-heSoB/(2*heSoA);
+                thongBao = "Phuong trinh co nghiem kep x= ";
+               }
+               //neu >0 thif cos nghiem phan biet
+               else{
+                    x1 = (-heSoB + Math.Sqrt(delta)) / (2 * heSoA);
+                    x2 = (-heSoB - Math.Sqrt(delta)) / (2 * heSoA);
+                    thongBao = "Phuong trinh co 2 nghiem phan biet:";
+                    thongBao = " Nghiem x1=" +x1;
+                    thongBao = " Nghiem x2=" +x2;
+               }
+        }
+    
+        return thongBao;
+    }
+       
         }
     }
-}
