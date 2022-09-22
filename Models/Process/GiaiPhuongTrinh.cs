@@ -1,5 +1,6 @@
 namespace LeThuTrangBTH.Models.Process
 {
+
     public class GiaiPhuongTrinh
     {
         //xay dựng các pthuc
@@ -24,8 +25,9 @@ namespace LeThuTrangBTH.Models.Process
             }
            //trả về dữ liệu
            return thongBao;
+
         }
-         public string GiaiPhuongTrinhBacHai(double heSoA, double heSoB,double heSoC)
+ public string GiaiPhuongTrinhBacHai(double heSoA, double heSoB,double heSoC)
     {
          //khai bao 1 bien  de chua du lieu
         string thongBao = "";
@@ -45,7 +47,7 @@ namespace LeThuTrangBTH.Models.Process
             {
                 thongBao ="Phuong trinh co vo so nghiem";
             }
-            //neu b=0 va c!=0 thì vo nghiem
+            //neu b=0 va c!=0 thif vo nghiem
             else{
                 thongBao = "phuong trinh vo nghiem";
             }
@@ -82,9 +84,8 @@ namespace LeThuTrangBTH.Models.Process
                     thongBao = " Nghiem x2=" +x2;
                }
         }
-    
+
         return thongBao;
     }
-       
-        }
-    }
+  }
+}
