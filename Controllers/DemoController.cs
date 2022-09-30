@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using LeThuTrangBTH.Models.Process;
+using MvcMovie.Models.Process;
+
 namespace LeThuTrangBTH.Controllers
 
 {
@@ -7,6 +9,10 @@ namespace LeThuTrangBTH.Controllers
     {
         //khai báo class theo tên của đối tựng
         GiaiPhuongTrinh gpt = new GiaiPhuongTrinh();
+        StringProcess strPro = new StringProcess();
+        StringProcess1 src = new StringProcess1();
+        StringProcess2 std = new StringProcess2();
+         StringProcess3 abc = new StringProcess3();
         //tạo các action
         public IActionResult Index()
         {
@@ -34,6 +40,49 @@ namespace LeThuTrangBTH.Controllers
             string mess = gpt.GiaiPhuongTrinhBacHai(a, b, c);
             ViewBag.mess = mess;
             return View();
+        }public IActionResult Xulychuoi()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Remove(string strInput)
+        {
+            ViewBag.mess = strPro.Remove(strInput);
+            return View();
+        }
+
+        public IActionResult Viethoa()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult Viethoa(string strInput)
+        {
+            ViewBag.mess = src.LowerToUpper(strInput);
+            return View(); 
+        }
+        public IActionResult Vietthuong()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult Vietthuong(string strInput)
+        {
+            ViewBag.mess = std.UpperToLower(strInput);
+            return View(); 
+        }
+
+        public IActionResult Viethoakytudau()
+        {
+            return View(); 
+        }
+        [HttpPost]
+        public IActionResult Viethoakytudau(string strInput)
+        {
+            ViewBag.mess = abc.CapitalizeOneFirstCharacter(strInput);
+            return View(); 
         }
     }
+   
+    
 }

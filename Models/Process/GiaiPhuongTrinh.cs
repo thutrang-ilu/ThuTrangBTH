@@ -27,8 +27,8 @@ namespace LeThuTrangBTH.Models.Process
            return thongBao;
 
         }
- public string GiaiPhuongTrinhBacHai(double heSoA, double heSoB,double heSoC)
-    {
+        public string GiaiPhuongTrinhBacHai(double heSoA, double heSoB,double heSoC)
+        {
          //khai bao 1 bien  de chua du lieu
         string thongBao = "";
         //khai bao 1 bien so de chua gia tri
